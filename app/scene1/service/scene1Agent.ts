@@ -1,4 +1,4 @@
-import { getResponseForGivenPrompt } from '../../../global/service/agent';
+import { getResponseForGivenPrompt } from '@/app/global/service/agent';
 
 interface AnalysisResult {
     resumeScore: number;

@@ -30,20 +30,28 @@ export default function WelcomePage() {
                 <div className="flex flex-col items-center justify-center min-h-screen bg-white text-black">
                     <div className="text-center">
                         <div className="text-4xl font-serif font-bold mb-6 text-blue-700">
-                            Congratulations on Joining Velsy Media!
+                            Choose Your Learning Domain
                         </div>
-                        <div className="text-xl text-gray-700 font-serif italic">
-                            "Your simulation journey as a Junior Software Engineer starts now. Embrace every challenge, learn, and shine!"
+                        <div className="text-xl text-gray-700 font-serif italic mb-8">
+                            "Select the domain you want to focus on and bridge the gap between theory and practical knowledge"
                         </div>
-                        <div className="mt-4 text-sm text-gray-500 font-serif">
-                            — The Velsy Media Team —
+                        <div className="flex gap-8 justify-center">
+                            <button
+                                className="px-12 py-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold text-xl shadow-lg hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105"
+                                onClick={() => router.push("/domain-selection?domain=ai")}
+                            >
+                                🤖 Artificial Intelligence
+                            </button>
+                            <button
+                                className="px-12 py-6 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-semibold text-xl shadow-lg hover:from-blue-700 hover:to-cyan-700 transition-all transform hover:scale-105"
+                                onClick={() => router.push("/domain-selection?domain=cloud")}
+                            >
+                                ☁️ Cloud Computing
+                            </button>
                         </div>
-                        <button
-                            className="mt-8 px-8 py-3 bg-blue-700 text-white rounded-lg font-semibold text-lg shadow hover:bg-blue-800 transition-colors"
-                            onClick={() => router.push("/scene1")}
-                        >
-                            Go to Scene 1
-                        </button>
+                        <div className="mt-6 text-sm text-gray-500 font-serif">
+                            — Choose your path to professional excellence —
+                        </div>
                     </div>
                 </div>
             )}
