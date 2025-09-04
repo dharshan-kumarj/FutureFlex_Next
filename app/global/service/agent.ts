@@ -24,9 +24,19 @@ export const getResponseForGivenPrompt = async (
         const response = await result.response;
         const text = await response.text();
         return text;
-    } catch (error) {
+    } catch (error: any) {
         console.error("Error getting AI response:", error);
-        throw new Error("Sorry, I couldn't process your request. Please make sure your API key is set correctly in localStorage with the key 'geminiApiKey'.");
+        
+        // Handle specific API key errors
+        if (error.message?.includes('API key not valid') || error.message?.includes('API_KEY_INVALID')) {
+            throw new Error("Invalid API key. Please check your Gemini API key. You can get one at https://aistudio.google.com/app/apikey");
+        }
+        
+        if (error.message?.includes('API key not found')) {
+            throw new Error("No API key found. Please set your Gemini API key in localStorage with the key 'geminiApiKey'.");
+        }
+        
+        throw new Error("Sorry, I couldn't process your request. Please check your API key and internet connection.");
     }
 };
 

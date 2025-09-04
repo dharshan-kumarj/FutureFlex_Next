@@ -116,11 +116,11 @@ function MailConversation({ initialConversation }: { initialConversation: Messag
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-medium ${
                     message.isFromMe ? 'bg-green-500' : 'bg-blue-500'
                   }`}>
-                    {message.senderName.split(' ').map(n => n[0]).join('')}
+                    {message.senderName ? message.senderName.split(' ').map(n => n[0]).join('') : message.sender ? message.sender.charAt(0).toUpperCase() : 'U'}
                   </div>
                   <div>
                     <div className="font-medium text-gray-900">
-                      {message.senderName}
+                      {message.senderName || message.sender || 'Unknown'}
                       <span className="font-normal text-gray-600 ml-2">
                         &lt;{message.sender}&gt;
                       </span>

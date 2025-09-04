@@ -1,25 +1,5 @@
 // Story entries for the scene 1 intro
 export const storyEntries = [
-  {
-    text: "Friday, July 25, 2025, in Chennai, India. You're browsing social media, looking for opportunities.",
-    size: "1.6rem",
-    speed: 50
-  },
-  {
-    text: "Suddenly, a job posting from VelsyMedia catches your eye: \"Junior Full-Stack Developer & AI Enthusiast.\"",
-    size: "1.8rem",
-    speed: 45
-  },
-  {
-    text: "This role perfectly matches what you've been learning. VelsyMedia focuses on digital content and media analytics, using AI.",
-    size: "1.6rem",
-    speed: 45
-  },
-  {
-    text: "Feeling excited, you spend hours crafting your application. After double-checking everything, you click 'Send'.",
-    size: "1.6rem",
-    speed: 45
-  }
 ];
 
 // Markdown for requirements

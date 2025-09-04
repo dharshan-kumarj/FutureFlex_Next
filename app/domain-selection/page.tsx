@@ -82,36 +82,6 @@ function DomainSelectionContent() {
             
             {showSkillLevel && currentDomain && (
                 <div className="max-w-4xl w-full">
-                    {!domain && (
-                        <div className="mb-8">
-                            <TypingEffect
-                                entries={[
-                                    { 
-                                        text: `Great choice! You've selected ${currentDomain.name} ${currentDomain.icon}`, 
-                                        size: "2.4rem", 
-                                        speed: 75 
-                                    },
-                                    { 
-                                        text: `\n${currentDomain.description}`, 
-                                        size: "1.3rem", 
-                                        speed: 55 
-                                    },
-                                    { 
-                                        text: "\nNow, let's assess your current skill level to provide you with the most relevant industry-level challenges.", 
-                                        size: "1.2rem", 
-                                        speed: 50 
-                                    },
-                                    { 
-                                        text: "\nThis will help us bridge the gap between theoretical knowledge and practical application.", 
-                                        size: "1.2rem", 
-                                        speed: 50 
-                                    },
-                                ]}
-                                onComplete={() => {}}
-                            />
-                        </div>
-                    )}
-                    
                     <div className="bg-white rounded-2xl shadow-xl p-8">
                         <div className="text-center mb-8">
                             <div className="text-6xl mb-4">{currentDomain.icon}</div>
